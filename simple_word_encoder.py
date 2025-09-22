@@ -1,4 +1,4 @@
-
+# I went ahead and did decode and encode
 def main():
     """Main function, asks to encode or decode and accounting for errors"""
     answer = input("Encode or decode? ")
@@ -45,13 +45,15 @@ def encode():
     elif answer.lower() == "n":
         quit
 def decode():
+    """Recieves word, checks the size of the word and creates variables for for() loop"""
     word = input("Enter a word to decode: ")
     shift = int(input("Enter a shift value: "))
     word_size = len(word)
     word_size = word_size + 1
     character = 0
     output_word = ""
-    #print(ord("a"), ord("z"), ord("A"), ord("Z"))
+    """For loop, checks to see if the shifted letter is already in the normal range, 
+    if not, it checks to see if original letter was in range, if it was, then it puts the new letter back in range"""
     for f in range(1, word_size):
         character_2 = word[character] 
         letter = ord(character_2)-shift
