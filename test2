@@ -1,0 +1,19 @@
+def output():
+    import sys
+    with open('output.txt', 'w') as output:
+        output.write("test" + "\n")
+        output.write("test")
+    with open('output.txt', 'r') as output:
+        test = output.read()
+        print(test)
+
+    
+    
+    # hmm = "test2"
+    # split = output.split()
+    # output.write(hmm)
+    # output.write("/n")
+    # output = open('output.txt', 'r')
+    # test = output.read()
+    # print(test)
+output()
