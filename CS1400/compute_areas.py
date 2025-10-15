@@ -35,7 +35,7 @@ def begin():
     elif(b == "n"): print("Thank you for using our program!")
     else: print("Invalid input")
 begin()
-    
+
 
 
 
