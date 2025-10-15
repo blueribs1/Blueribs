@@ -7,8 +7,20 @@ def main():
         grow_rate = float(sys.argv[2])
         iterations = int(sys.argv[3])+1
     except:
-        1==1
+        restart = input("Invalid input (make sure to use floats for population and growth rate, and integer for iterations)\n would you like to try again? (y) or (n) ")
+        if restart.lower == 'y':
+            main()
+        else:
+            quit
+    population = logistic_equation(init_pop, grow_rate, iterations)
+    b=0
+    while b < iterations:
+        pop3 = round(float(population[b]), 3)
         
+        print("{}   {:.3f}".format(b, pop3))
+        b+=1
+
+def logistic_equation(init_pop, grow_rate, iterations):
     population = []
     population.append(init_pop)
     a = 1
@@ -17,16 +29,6 @@ def main():
         
         population.append(pop2)
         a+=1
-    print(population)
-    b=0
-    c=0
-    while b < iterations:
-        pop3 = round(float(population[b]), 3)
-        
-        print("{}, {:.3f}".format(b, pop3))
-        b+=1
-        c+=1
-        
-
+    return population
 
 main()
