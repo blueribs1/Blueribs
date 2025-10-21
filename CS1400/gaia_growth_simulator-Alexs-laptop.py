@@ -19,20 +19,6 @@ def main():
         
         print("{}   {:.3f}".format(b, pop3))
         b+=1
-    
-    # """Outputs list to a text document"""
-    # with open("number_series.txt", "w") as output:
-    #     f=0
-    #     for f in range(list_size):
-    #         begin = list_array[f]
-    #         output.write(f"{begin}\n")
-    #         f+=1
-    # print(f"Saved {list_size} numbers to number_series.txt")
-    
-    # """Extra code to check if text document is correct"""
-    # # with open("number_series.txt", "r") as in_put:
-    # #     array = in_put.read()
-    # #     print(array)
 
 def logistic_equation(init_pop, grow_rate, iterations):
     population = []
