@@ -12,6 +12,7 @@ def main():
             main()
         elif answer.lower() == "n":
             quit
+
 def encode_word():
     """Recieves word and shift, and calls word shifter"""
     word = input("Enter a word to encode: ")
@@ -24,6 +25,7 @@ def encode_word():
         main()
     elif answer.lower() == "n":
         quit
+
 def decode_word():
     """Recieves word and shift, and calls word shifter"""
     word = input("Enter a word to decode: ")
@@ -36,6 +38,7 @@ def decode_word():
         main()
     elif answer.lower() == "n":
         quit
+
 def shift_letter(shift, word, encode):
     """Creates variables needed for for() loop and ensures that the shift is no larger than 26"""
     shift%=26
