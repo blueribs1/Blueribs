@@ -12,7 +12,7 @@ def main():
     # For loop, gets random number and goes in direction based on that 
     for b in range(a):
         plt.plot(x, y, 'o-')
-        rand = random.choice(0,1,2,3)
+        rand = random.choice([0,1,2,3])
         if rand == 0:
             x_pos-=1
             x.append(x_pos)
