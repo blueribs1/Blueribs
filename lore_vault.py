@@ -26,12 +26,10 @@ def main():
                     largest_line_2 =  output[1]
                 """Adds line to list"""
                 sorting.append({"line_text":output[0],"number":int(output[1])})
-
         """Finds average, sorts the list by numbers"""
         average/=line_number
         average=round(average)
         sorting.sort(key=sortation)
-        
         """Opens output, outputs everything needed to file"""
         with open(text_out, "w") as output:
             output.write("{}\nLongest ({}): {}".format(text_old, largest_line_2, largest_line))
@@ -41,7 +39,6 @@ def main():
                 outputer.append(i["line_text"])
             for f in outputer:
                 output.write(f + "\n")
-
 def sortation(e):
     return e["number"]
 if __name__ == '__main__':
